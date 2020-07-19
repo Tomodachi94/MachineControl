@@ -19,6 +19,7 @@ print("logoff")
 print("terminal")
 print("on")
 print("off")
+print("update")
 print("")
 term.setTextColor(colors.white)
 input = read()
@@ -32,6 +33,8 @@ elseif input == "on" then
   rs.setOutput("bottom", false)
 elseif input == "off" then
   rs.setOutput("bottom", true)
+elseif input == "update" then
+  shell.run("update")
 else
   print("Invalid command.")
 end
