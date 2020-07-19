@@ -1,0 +1,36 @@
+--Author: Tomodachi94
+--Platform: ComputerCraft basic commands
+--Last reviewed: 7/18/2020 (Fixed) V1.2
+--Last reviewed by: Rolcam
+--Computer Lock (for this Program):
+while true do
+term.clear()
+--Clears the terminal
+term.setCursorPos(1, 1)
+--Fixes a glitch where, when something is printed, appears 4-5 lines from the top.
+machinename = ("Oil Rig Control")
+--Controls the name of the machine, which is printed in the program.
+term.setTextColor(colors.red)
+print(machinename)
+term.setTextColor(colors.yellow)
+print("Commands")
+term.setTextColor(colors.white)
+print("logoff")
+print("terminal")
+print("on")
+print("off")
+input = read()
+if input == "logoff" then
+  term.clear()
+  shell.run("startup")
+  break
+elseif input == "terminal" then
+  break
+elseif input == "on" then
+  rs.setOutput("bottom", false)
+elseif input == "off" then
+  rs.setOutput("bottom", true)
+else
+  print("Invalid command.")
+end
+end
