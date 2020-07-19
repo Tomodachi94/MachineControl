@@ -1,6 +1,8 @@
 --MachineControlUpdate by Tomodachi94
 --Feel free to use this for commerical and non-commercial use
 --If you modify it, please give credit.
+--MachineControl Pastebin: https://pastebin.com/TfbP996B
+--Lock program Pastebin: https://pastebin.com/LhAt2bPW
 --Last modified: 7/19/2020
 --By: Tomodachi94
 --Pastebin: (No pastebin yet, will be soon.)
@@ -9,7 +11,7 @@ print("This is the MachineControl updater/installer.")
 print("Would you like to add inbuilt security to your MachineControl? (y/n)")
 security = read()
 if security == "y" then
-  print("This will override 2 files: "startup" and "machinecontrol", and reset the passwords to their defaults. Proceed? (y/n)")
+  print("This will override 2 files: 'startup' and 'machinecontrol', and reset the passwords to their defaults. Proceed? (y/n)")
   confirm = read()
   if confirm == "y" then
     print("Installing security to startup...")
@@ -17,24 +19,19 @@ if security == "y" then
     print("Install success!")
     print(" Installing MachineControl to MachineControl...")
     shell.run("pastebin get TfbP996B machinecontrol")
-    print("You will now need to edit startup, and change the password. Then, run reboot and the program should work as expected. (Report errors at GitHub)")
-    break
+    print("You will now need to edit startup, and change the password. Then, run reboot and the program should work as expected.(Report errors at GitHub)")
   elseif confirm == "n" then
     print("Installation cancelled. Rerun to start it again.")
-    break
   else
     print("Invalid input! Cancelling...")
     print("Rerun this program to start the installation again.")
-    break
-if security == "n"
-  print("This installer/updater will override 1 file: machinecontrol. Proceed? (y/n)"
+if security == "n" then
+  print("This installer/updater will override 1 file: 'machinecontrol'. Proceed? (y/n)")
   confirm = read()
   if confirm == "y" then
     print("Installing...")
     shell.run("pastebin get TfbP996B machinecontrol")
     print("Install success!")
-    break
   elseif confirm == "n" then
     print("Installation cancelled. Rerun the program to start it again.")
-    break
-    
+end
