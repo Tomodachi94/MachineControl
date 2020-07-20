@@ -1,8 +1,9 @@
 --Author: Tomodachi94
 --Platform: ComputerCraft basic commands
---Last reviewed: 7/18/2020 (Fixed) V1.2
---Last reviewed by: Rolcam
---Computer Lock (for this Program):
+--Last reviewed: 7/20/2020 V1.2.1
+--Last reviewed by: Tomodachi94
+--Installer: cJkn6xuk
+--Computer Lock (for this Program): LhAt2bPW
 while true do
 term.clear()
 --Clears the terminal
@@ -25,6 +26,7 @@ term.setTextColor(colors.white)
 input = read()
 if input == "logoff" then
   term.clear()
+  term.setCursorPos(1, 1)
   shell.run("startup")
   break
 elseif input == "terminal" then
