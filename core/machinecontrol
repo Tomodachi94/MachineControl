@@ -4,13 +4,16 @@
 --Last reviewed by: Tomodachi94
 --Installer: cJkn6xuk
 --Computer Lock (for this Program): LhAt2bPW
+
+--Variables (Change to suit)-----------------------
+machinename = ("Oil Rig Control") --Controls the name of the machine, which is printed in the program.
+redout = ("bottom") -- the side that the redstone signal is emitted to.
+
+--Main------------------
 while true do
-term.clear()
---Clears the terminal
-term.setCursorPos(1, 1)
---Fixes a glitch where, when something is printed, appears 4-5 lines from the top.
-machinename = ("Oil Rig Control")
---Controls the name of the machine, which is printed in the program.
+term.clear() --Clears the terminal
+
+term.setCursorPos(1, 1) --Fixes a glitch where, when something is printed, appears 4-5 lines from the top.
 term.setTextColor(colors.red)
 print(machinename)
 term.setTextColor(colors.yellow)
@@ -32,9 +35,9 @@ if input == "logoff" then
 elseif input == "terminal" then
   break
 elseif input == "on" then
-  rs.setOutput("bottom", false)
+  rs.setOutput(redout, false)
 elseif input == "off" then
-  rs.setOutput("bottom", true)
+  rs.setOutput(redout, true)
 elseif input == "update" then
   shell.run("update")
 else
