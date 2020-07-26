@@ -5,9 +5,10 @@
 --Installer: cJkn6xuk
 --Computer Lock (for this Program): LhAt2bPW
 
---Variables (Change to suit)-----------------------
-machinename = ("Oil Rig Control") --Controls the name of the machine, which is printed in the program.
-redout = ("bottom") -- the side that the redstone signal is emitted to.
+--Variables (Autoconfig)-----------------------
+settings.load("core/machinecontrol-config")
+machinename = settings.get(machinename)--Controls the name of the machine, which is printed in the program.
+redout = settings.get(redout) -- the side that the redstone signal is emitted to.
 
 --Main------------------
 while true do
