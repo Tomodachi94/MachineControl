@@ -1,2 +1,2 @@
 # MachineControl
-A controller for your Tekkit machines
+A glorified lever.
