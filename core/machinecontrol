@@ -9,6 +9,28 @@
 machinename = ("Oil Rig Control") --Controls the name of the machine, which is printed in the program.
 redout = ("bottom") -- the side that the redstone signal is emitted to.
 
+--Functions-------------------------------------
+function machineOn()
+  rs.setOutput(redout, false)
+end
+
+function machineOff()
+  rs.setOutput(redout, true)
+end
+
+function toTerminal()
+
+end
+
+function machineLogoff()
+  term.clear()
+  term.setCursorPos(1, 1)
+  if fs.exsists("startup") then
+    shell.run("startup")
+    break
+  else
+    break
+end
 --Main------------------
 while true do
 term.clear() --Clears the terminal
@@ -28,18 +50,18 @@ print("")
 term.setTextColor(colors.white)
 input = read()
 if input == "logoff" then
-  term.clear()
-  term.setCursorPos(1, 1)
-  shell.run("startup")
-  break
+  machineLogoff()
 elseif input == "terminal" then
-  break
+  enterTerminal()
 elseif input == "on" then
-  rs.setOutput(redout, false)
+  machineOn()
 elseif input == "off" then
-  rs.setOutput(redout, true)
+  machineOff
 elseif input == "update" then
-  shell.run("update")
+  if fs.exsists("update") then
+    shell.run("update")
+  else
+    shell.run("pastebin get ")
 else
   print("Invalid command.")
 end
