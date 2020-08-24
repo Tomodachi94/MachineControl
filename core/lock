@@ -27,7 +27,7 @@ if password == debug then
 end
   if password == (code) then
    print "Access Granted!"
-   shell.run("machinecontrol")
+   shell.run("machinecontrol.lua")
    break
   else
         if hax then
