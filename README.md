@@ -4,3 +4,5 @@ A glorified lever.
 * Updater
 * Password protection
 * Glorified lever-y-ness
+## Install  
+>pastebin get GYguDsXN update
